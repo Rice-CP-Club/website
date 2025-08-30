@@ -1,0 +1,397 @@
+/* Reset minimal elements */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+body {
+  background-color: #e0e2e6;
+  /* light gray background */
+  font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono",
+    Menlo, Monaco, Consolas, monospace;
+  color: #00205b;
+  /* primary text in dark blue */
+}
+
+p.descr {
+  max-width: 100ch; /* Constrains line length */
+  margin-left: 2rem; /* Offsets the entire paragraph */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  margin-left: 2rem;
+  max-width: 100ch;
+  padding-bottom: 2rem;
+}
+
+form button {
+  right: 0.5rem;
+}
+
+ul.standard {
+  margin-top: 1rem;
+  list-style-type: disc; /* Use round bullets */
+  list-style-position: outside; /* Bullets outside the content box */
+  margin-left: 1.5rem; /* Offset from left */
+  padding-left: 1.2rem; /* Space for bullet */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+ul.standard li {
+  margin-bottom: 0.5rem; /* Space between items */
+  padding-left: 0.2rem; /* Nudge text after bullet */
+}
+
+/* ----- Header Layout ----- */
+.site-header {
+  background-color: #00205b;
+  /* Rice Blue */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-bottom: 3px solid #c1c6c8;
+  /* Rice Gray */
+}
+
+.site-header .header-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-header .logo {
+  height: 45px;
+  width: auto;
+}
+
+.site-header h1,
+.site-header h1 a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+/* Scoped navigation styles */
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.site-header nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+}
+
+.site-header nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.site-header nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* ----- Responsive header tweaks ----- */
+@media (max-width: 600px) {
+  .site-header .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .site-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .site-header nav ul {
+    gap: 0.6rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ----- Footer ----- */
+footer {
+  background-color: #c1c6c8;
+  /* Rice Gray */
+  color: #00205b;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* ----- Form Styles (.contact) ----- */
+.contact {
+  background-color: #adc7dc;
+  /* Light blue accent */
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 32, 91, 0.1);
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  color: #00205b;
+}
+
+.contact p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+  color: #00205b;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #00205b;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #c1c6c8;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* ----- Buttons ----- */
+button[type="submit"] {
+  background-color: #00205b;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0a509e;
+  /* slightly lighter blue for hover */
+}
+
+/* ----- Portfolio Section ----- */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.portfolio-item {
+  flex: 0 1 calc(33.33% - 20px);
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 32, 91, 0.1);
+  box-sizing: border-box;
+}
+
+.portfolio-item h3 {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  color: #00205b;
+}
+
+.portfolio-item p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-item a {
+  display: inline-block;
+  background-color: #00205b;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.portfolio-item a:hover {
+  background-color: #0a509e;
+}
+
+/* ----- Link Overrides ----- */
+a {
+  color: #00205b;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ----- Utility: Centered wrapper ----- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 33vw;
+}
+
+.wrapper {
+  background-color: #e0e2e6;
+  border: 1px solid #c1c6c8;
+  width: 33vw;
+  height: 33vw;
+}
+
+.wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content {
+  margin: 2vw 3vw;
+}
+
+.content p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* ----- TABLE ----- */
+
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+.tabrow {
+  text-align: center;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  line-height: 24px;
+  height: 26px;
+  overflow: hidden;
+  font-size: smaller;
+  position: relative;
+}
+.tabrow li {
+  border: 1px solid #aaa;
+  background: #d1d1d1;
+  background: -o-linear-gradient(top, #ececec 50%, #d1d1d1 100%);
+  background: -ms-linear-gradient(top, #ececec 50%, #d1d1d1 100%);
+  background: -moz-linear-gradient(top, #ececec 50%, #d1d1d1 100%);
+  background: -webkit-linear-gradient(top, #ececec 50%, #d1d1d1 100%);
+  background: linear-gradient(top, #ececec 50%, #d1d1d1 100%);
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #fff;
+  text-shadow: 0 1px #fff;
+  margin: 0 -5px;
+  padding: 0 15px;
+}
+.tabrow a {
+  color: #555;
+  text-decoration: none;
+}
+.tabrow li.selected {
+  background: #fff;
+  color: #333;
+  z-index: 2;
+  border-bottom-color: #fff;
+}
+.tabrow:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #aaa;
+  z-index: 1;
+}
+.tabrow li:before,
+.tabrow li:after {
+  border: 1px solid #aaa;
+  position: absolute;
+  bottom: -1px;
+  width: 5px;
+  height: 5px;
+  content: " ";
+}
+
+.tabrow li:before {
+  left: -6px;
+  border-bottom-right-radius: 6px;
+  border-width: 0 1px 1px 0;
+  box-shadow: 2px 2px 0 #d1d1d1;
+}
+.tabrow li:after {
+  right: -6px;
+  border-bottom-left-radius: 6px;
+  border-width: 0 0 1px 1px;
+  box-shadow: -2px 2px 0 #d1d1d1;
+}
+.tabrow li.selected:before {
+  box-shadow: 2px 2px 0 #fff;
+}
+.tabrow li.selected:after {
+  box-shadow: -2px 2px 0 #fff;
+}
+
+TABLE.list {
+  width: 100%;
+  border-spacing: 0;
+}
+table.list tr:hover {
+  background: #cfd3d7;
+}
+table.list th {
+  padding: 5px;
+  background: #cfd3d7;
+  color: #002469;
+  vertical-align: top;
+}
+TABLE.list TD {
+  padding: 5px 10px;
+  vertical-align: top;
+  font-size: smaller;
+}
+
+TD.date {
+  vertical-align: top;
+  text-align: right;
+  white-space: nowrap;
+}
+TD.topic {
+  vertical-align: top;
+  text-align: left;
+}
+TD.holiday {
+  color: gray;
+}

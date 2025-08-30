@@ -1,0 +1,32 @@
+<header class="site-header">
+  <div class="header-top">
+    <a href="{{ '/' | relative_url }}">
+      <img
+        src="{{ '/assets/ICPCLogo.png' | relative_url }}"
+        alt="Club Logo"
+        class="logo"
+      />
+    </a>
+    <h1><a href="{{ '/' | relative_url }}">Competitive Programming Club</a></h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
+      <li><a href="{{ '/history/' | relative_url }}">History</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll("nav a");
+      links.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</header>
