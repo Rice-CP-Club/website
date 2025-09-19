@@ -28,6 +28,7 @@ p.descr {
 
 form {
   margin-left: 2rem;
+  margin-right: 2rem;
   max-width: 100ch;
   padding-bottom: 2rem;
 }
@@ -50,6 +51,25 @@ ul.standard {
 ul.standard li {
   margin-bottom: 0.5rem; /* Space between items */
   padding-left: 0.2rem; /* Nudge text after bullet */
+}
+
+/* ----- Index ----- */
+
+.sponsors {
+  margin-left: 2rem; /* Offsets the entire paragraph */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sponsors h2 {
+  font-size: 1.25em;
+  margin-bottom: 18px;
+}
+
+.sponsors img {
+  height: 60px;
+  width: auto;
+  border-radius: 6px;
 }
 
 /* ----- Header Layout ----- */
