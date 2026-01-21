@@ -14,7 +14,13 @@ permalink: /contact/
   the club mailing list.
 </p>
 
-<form name="contact" netlify>
+<form name="contact" netlify netlify-honeypot="bot-field">
+  <p class="hidden">
+    <label>
+      Don’t fill this out if you’re human:
+      <input name="bot-field" type="text" />
+    </label>
+  </p>
   <label>
     Your name:
     <textarea name="name"></textarea>

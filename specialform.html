@@ -1,0 +1,67 @@
+---
+layout: default
+title: Special Form
+permalink: /specialform/
+---
+
+<form
+  name="survey"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <p class="hidden" style="display: none">
+    <label>
+      Don’t fill this out if you’re human:
+      <input name="bot-field" />
+    </label>
+  </p>
+
+  <label>
+    Your name:
+    <input type="text" name="name" required />
+  </label>
+
+  <label>
+    Your email:
+    <input type="email" name="email" required />
+  </label>
+
+  <hr />
+
+  <fieldset>
+    <legend>
+      What kind of meetings would you like to see in Spring 2026? Please select
+      the option that best describes your interest.
+    </legend>
+
+    <label>
+      <input type="radio" name="goal" value="learn-code" checked />
+      Weekly practice competitions (same as Fall 2025)
+    </label>
+
+    <label>
+      <input type="radio" name="goal" value="build-business" />
+      Lecture series (same as Spring 2025)
+    </label>
+
+    <label>
+      <input type="radio" name="goal" value="hiring" />
+      Mix between practice competitons and lectures
+    </label>
+
+    <label
+      style="display: flex; align-items: center; gap: 10px; margin-top: 10px"
+    >
+      <input type="radio" name="goal" value="other" />
+      <span>Other:</span>
+      <input
+        type="text"
+        name="other-goal-detail"
+        placeholder="Please specify..."
+      />
+    </label>
+  </fieldset>
+
+  <button class="form-button" type="submit">Register</button>
+</form>
