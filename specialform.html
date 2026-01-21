@@ -4,6 +4,35 @@ title: Special Form
 permalink: /specialform/
 ---
 
+<style>
+  /* 1. Space between name/email fields */
+  label {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  /* 2. Fixes the disconnected rectangle and adds space above it */
+  fieldset {
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    padding: 15px;
+  }
+
+  /* 3. Ensures the legend (question text) sits cleanly on the line */
+  legend {
+    padding: 0 5px;
+    font-weight: bold;
+  }
+
+  /* 4. Tiny gap between radio options */
+  .radio-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+</style>
+
 <form
   name="survey"
   method="POST"
@@ -11,57 +40,56 @@ permalink: /specialform/
   netlify-honeypot="bot-field"
 >
   <p class="hidden" style="display: none">
-    <label>
-      Don’t fill this out if you’re human:
-      <input name="bot-field" />
-    </label>
+    <label>Don’t fill this out: <input name="bot-field" /></label>
   </p>
 
   <label>
     Your name:
-    <input type="text" name="name" required />
+    <input type="text" name="name" required style="width: 100%" />
   </label>
 
   <label>
     Your email:
-    <input type="email" name="email" required />
+    <input type="email" name="email" required style="width: 100%" />
   </label>
 
-  <hr />
-
   <fieldset>
-    <legend>
-      What kind of meetings would you like to see in Spring 2026? Please select
-      the option that best describes your interest.
-    </legend>
+    <legend>What kind of meetings would you like to see in Spring 2026?</legend>
 
-    <label>
-      <input type="radio" name="goal" value="practice-contest" checked />
-      Weekly practice competitions (same as Fall 2025)
-    </label>
+    <div class="radio-row">
+      <input type="radio" id="p" name="goal" value="practice-contest" checked />
+      <label for="p" style="margin: 0"
+        >Weekly practice competitions (same as Fall 2025)</label
+      >
+    </div>
 
-    <label>
-      <input type="radio" name="goal" value="lectures" />
-      Lecture series (same as Spring 2025)
-    </label>
+    <div class="radio-row">
+      <input type="radio" id="l" name="goal" value="lectures" />
+      <label for="l" style="margin: 0"
+        >Lecture series (same as Spring 2025)</label
+      >
+    </div>
 
-    <label>
-      <input type="radio" name="goal" value="mixed" />
-      Mix between practice competitons and lectures
-    </label>
+    <div class="radio-row">
+      <input type="radio" id="m" name="goal" value="mixed" />
+      <label for="m" style="margin: 0"
+        >Mix between practice competitions and lectures</label
+      >
+    </div>
 
-    <label
-      style="display: flex; align-items: center; gap: 10px; margin-top: 10px"
-    >
-      <input type="radio" name="goal" value="other" />
-      <span>Other:</span>
+    <div class="radio-row">
+      <input type="radio" id="o" name="goal" value="other" />
+      <label for="o" style="margin: 0">Other:</label>
       <input
         type="text"
         name="other-goal-detail"
         placeholder="Please specify..."
+        style="flex-grow: 1"
       />
-    </label>
+    </div>
   </fieldset>
 
-  <button class="form-button" type="submit">Register</button>
+  <button class="form-button" type="submit" style="margin-top: 10px">
+    Send
+  </button>
 </form>
